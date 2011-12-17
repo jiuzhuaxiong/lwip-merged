@@ -1,3 +1,5 @@
 This is a merge of trunk lwip and lwip-contrib.
 Currently it adds some patches but it will go against
 the official gits as soon as some patches are merged.
+
+https://github.com/yarrick/lwip-merged
