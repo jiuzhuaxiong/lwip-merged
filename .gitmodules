@@ -1,6 +1,0 @@
-[submodule "contrib"]
-	path = contrib
-	url = git://github.com/yarrick/lwip-contrib.git
-[submodule "lwip"]
-	path = lwip
-	url = git://github.com/yarrick/lwip.git
