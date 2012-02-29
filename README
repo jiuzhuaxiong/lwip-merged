@@ -1,5 +1,13 @@
 This is a merge of trunk lwip and lwip-contrib.
-Currently it adds some patches but it will go against
-the official gits as soon as some patches are merged.
+It contains the two official git trees, updated in sync.
+It will hopefully be updated by a script.
+
+lwip    from git://git.sv.gnu.org/lwip.git
+contrib from git://git.sv.gnu.org/lwip/lwip-contrib.git
+
+This is needed for my buildbot building lwip unix targets.
 
 https://github.com/yarrick/lwip-merged
+
+/ Cheers
+Erik Ekman <erik@kryo.se>
