@@ -2,10 +2,14 @@ language: c
 os: linux
 sudo: false
 
+compiler:
+ - clang
+ - gcc
+
 addons:
   apt:
-      packages:
-          - check
+    packages:
+     - check
 
 script: ./test.sh
 
