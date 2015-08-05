@@ -1,8 +1,11 @@
 language: c
 os: linux
+sudo: false
 
-before_install: apt-get update
-install: apt-get install check
+addons:
+  apt:
+      packages:
+          - check
 
 script: ./test.sh
 
