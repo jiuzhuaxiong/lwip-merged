@@ -1,0 +1,8 @@
+language: c
+os: linux
+
+before_install: apt-get update
+install: apt-get install check
+
+script: ./test.sh
+
