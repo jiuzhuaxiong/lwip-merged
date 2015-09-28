@@ -10,6 +10,7 @@ addons:
   apt:
     packages:
      - check
+     - libsubunit-dev
 
 script: ./test.sh
 
