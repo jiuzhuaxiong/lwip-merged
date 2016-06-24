@@ -48,7 +48,7 @@ if [ "$LWIP_PREREV" != "$LWIP_POSTREV" ]; then
 	CHANGE=Yes
 	echo "lwip repo:" >> $MESSAGEFILE
 	cd lwip
-	git log --oneline $LWIP_PREREV..$LWIP_POSTREV >> $MESSAGEFILE
+	git log --pretty=format:"%h %s (%an)" $LWIP_PREREV..$LWIP_POSTREV >> $MESSAGEFILE
 	cd ..
 	echo "" >> $MESSAGEFILE
 fi
@@ -58,7 +58,7 @@ if [ "$CONTRIB_PREREV" != "$CONTRIB_POSTREV" ]; then
 	CHANGE=Yes
 	echo "lwip-contrib repo:" >> $MESSAGEFILE
 	cd contrib
-	git log --oneline $CONTRIB_PREREV..$CONTRIB_POSTREV >> $MESSAGEFILE
+	git log --pretty=format:"%h %s (%an)" $CONTRIB_PREREV..$CONTRIB_POSTREV >> $MESSAGEFILE
 	cd ..
 	echo "" >> $MESSAGEFILE
 fi
