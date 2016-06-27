@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export CC=$(COMPILER)
 cd contrib/ports/unix/proj/lib
 #build library
 make clean all

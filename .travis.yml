@@ -2,7 +2,6 @@ language: c
 os: linux
 sudo: false
 
-
 matrix:
   include:
     - compiler: gcc
@@ -14,18 +13,18 @@ matrix:
             - check
             - libsubunit-dev
             - gcc-4.9
-      env: CC=gcc-4.9
+      env: COMPILER=gcc-4.9
     - compiler: clang
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.6
+            - llvm-toolchain-precise-3.7
           packages:
             - check
             - libsubunit-dev
             - clang-3.7
-      env: CC=clang-3.7
+      env: COMPILER=clang-3.7
 
 script: ./test.sh
 
