@@ -9,11 +9,11 @@ compiler:
 addons:
   apt:
     sources:
-     - llvm-toolchain-precise-3.8
+     - llvm-toolchain-precise-3.7
     packages:
      - check
      - libsubunit-dev
-     - clang-3.8
+     - clang-3.7
 
 script: ./test.sh
 
