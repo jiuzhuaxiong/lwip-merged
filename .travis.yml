@@ -2,18 +2,30 @@ language: c
 os: linux
 sudo: false
 
-compiler:
- - clang
- - gcc
 
-addons:
-  apt:
-    sources:
-     - llvm-toolchain-precise-3.7
-    packages:
-     - check
-     - libsubunit-dev
-     - clang-3.7
+matrix:
+  include:
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - check
+            - libsubunit-dev
+            - gcc-4.9
+      env: CC=gcc-4.9
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.6
+          packages:
+            - check
+            - libsubunit-dev
+            - clang-3.7
+      env: CC=clang-3.7
 
 script: ./test.sh
 
