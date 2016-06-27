@@ -26,5 +26,11 @@ matrix:
             - clang-3.7
       env: COMPILER=clang-3.7
 
+addons:
+  apt:
+    packages:
+      - check
+      - libsubunit-dev
+
 script: ./test.sh
 

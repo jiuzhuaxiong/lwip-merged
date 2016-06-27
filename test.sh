@@ -1,6 +1,9 @@
 #!/bin/bash
 
-export CC=$(COMPILER)
+if [ "$COMPILER" ];
+then
+	export CC=$COMPILER
+fi
 cd contrib/ports/unix/proj/lib
 #build library
 make clean all
