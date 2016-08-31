@@ -4,7 +4,7 @@ if [ "$COMPILER" ];
 then
 	export CC=$COMPILER
 fi
-cd contrib/ports/unix/proj/lib
+cd contrib/ports/unix/lib
 #build library
 make clean all
 ERR=$?
@@ -29,7 +29,7 @@ if [ $ERR != 0 ]; then
        echo "unixsim failed"
        exit 33
 fi
-cd ../../check
+cd ../check
 #build and run unit tests
 make clean all
 ERR=$?
