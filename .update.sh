@@ -30,9 +30,11 @@ git pull --recurse-submodules
 #Read out new HEAD
 cd lwip
 git rebase origin/master
+git push github master
 LWIP_POSTREV=`git rev-parse HEAD`
 cd ../contrib
 git rebase origin/master
+git push github master
 CONTRIB_POSTREV=`git rev-parse HEAD`
 cd ..
 
